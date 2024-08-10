@@ -186,11 +186,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "specialOffer":
             MessageLookupByLibrary.simpleMessage("Speciální nabídky"),
         "splashScreenOneAppName":
-            MessageLookupByLibrary.simpleMessage("Maanstore WooCommerce"),
+            MessageLookupByLibrary.simpleMessage("Zacstore WooCommerce"),
         "splashScreenOneAppVersion":
             MessageLookupByLibrary.simpleMessage("Verze 5.0"),
         "splashScreenTwoHeadlines1":
-            MessageLookupByLibrary.simpleMessage("Vítejte v Maanstore"),
+            MessageLookupByLibrary.simpleMessage("Vítejte v Zacstore"),
         "splashScreenTwoHeadlines2":
             MessageLookupByLibrary.simpleMessage("Je to pro vás jednoduché"),
         "splashScreenTwoHeadlines3": MessageLookupByLibrary.simpleMessage(
@@ -203,8 +203,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Naleznete zde skvělé produkty a nástroje pro vaše potřeby. Jsme 100% zaměřeni na zajištění kvality. Děkujeme"),
         "state": MessageLookupByLibrary.simpleMessage("Stát*"),
         "stateHint": MessageLookupByLibrary.simpleMessage("Zadejte stát"),
-        "storeName": MessageLookupByLibrary.simpleMessage("MaanStore Móda"),
-        "storeTitle": MessageLookupByLibrary.simpleMessage("MaanStore"),
+        "storeName": MessageLookupByLibrary.simpleMessage("ZacStore Móda"),
+        "storeTitle": MessageLookupByLibrary.simpleMessage("ZacStore"),
         "strAddress1Text":
             MessageLookupByLibrary.simpleMessage("Přidat novou adresu 1"),
         "strAddress1TextHint": MessageLookupByLibrary.simpleMessage(

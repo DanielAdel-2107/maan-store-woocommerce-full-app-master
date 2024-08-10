@@ -187,11 +187,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "specialOffer":
             MessageLookupByLibrary.simpleMessage("Spesiale Aanbiedings"),
         "splashScreenOneAppName":
-            MessageLookupByLibrary.simpleMessage("Maanstore WooCommerce"),
+            MessageLookupByLibrary.simpleMessage("Zacstore WooCommerce"),
         "splashScreenOneAppVersion":
             MessageLookupByLibrary.simpleMessage("Weergawe 5.0"),
         "splashScreenTwoHeadlines1":
-            MessageLookupByLibrary.simpleMessage("Welkom by Maanstore"),
+            MessageLookupByLibrary.simpleMessage("Welkom by Zacstore"),
         "splashScreenTwoHeadlines2":
             MessageLookupByLibrary.simpleMessage("Dit is maklik vir jou"),
         "splashScreenTwoHeadlines3":
@@ -205,8 +205,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "state": MessageLookupByLibrary.simpleMessage("Provinsie*"),
         "stateHint":
             MessageLookupByLibrary.simpleMessage("Voer \'n provinsie in"),
-        "storeName": MessageLookupByLibrary.simpleMessage("MaanStore Mode"),
-        "storeTitle": MessageLookupByLibrary.simpleMessage("MaanStore"),
+        "storeName": MessageLookupByLibrary.simpleMessage("ZacStore Mode"),
+        "storeTitle": MessageLookupByLibrary.simpleMessage("ZacStore"),
         "strAddress1Text":
             MessageLookupByLibrary.simpleMessage("Voeg Nuwe Adres 1 by"),
         "strAddress1TextHint":

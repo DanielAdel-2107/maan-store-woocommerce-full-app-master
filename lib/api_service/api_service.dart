@@ -31,7 +31,10 @@ class APIService {
       var response = await Dio().post(
         Config.url + Config.customerURL,
         data: model.toJson(),
-        options: Options(headers: {HttpHeaders.authorizationHeader: 'Basic $authToken', HttpHeaders.contentTypeHeader: 'application/json'}),
+        options: Options(headers: {
+          HttpHeaders.authorizationHeader: 'Basic $authToken',
+          HttpHeaders.contentTypeHeader: 'application/json'
+        }),
       );
       if (response.statusCode == 201) {
         ret = true;
@@ -58,11 +61,14 @@ class APIService {
             'username': email,
             'password': password,
           },
-          options: Options(headers: {HttpHeaders.contentTypeHeader: 'application/x-www-form-urlencoded'}));
+          options: Options(headers: {
+            HttpHeaders.contentTypeHeader: 'application/x-www-form-urlencoded'
+          }));
 
       if (response.statusCode == 200) {
         await prefs.setInt('customerId', response.data['data']['id']);
-        await prefs.setString('token', response.data['data']['token'].toString());
+        await prefs.setString(
+            'token', response.data['data']['token'].toString());
 
         ret = true;
       }
@@ -78,7 +84,8 @@ class APIService {
 
   Future<List<CategoryModel>> getCategory() async {
     List<CategoryModel> category = [];
-    String url = '${Config.url}${Config.categoryURL}?consumer_key=${Config.key}&consumer_secret=${Config.secret}&per_page=100';
+    String url =
+        '${Config.url}${Config.categoryURL}?consumer_key=${Config.key}&consumer_secret=${Config.secret}&per_page=100';
     var response = await http.get(Uri.parse(url));
 
     final data = jsonDecode(response.body);
@@ -94,7 +101,8 @@ class APIService {
 
   Future<List<ProductModel>> getProductOfCategory(int categoryId) async {
     List<ProductModel> productsOfCategory = [];
-    String url = '${Config.url}${Config.productsURL}?category=$categoryId&consumer_key=${Config.key}&consumer_secret=${Config.secret}&per_page=100';
+    String url =
+        '${Config.url}${Config.productsURL}?category=$categoryId&consumer_key=${Config.key}&consumer_secret=${Config.secret}&per_page=100';
     var response = await http.get(Uri.parse(url));
 
     final data = jsonDecode(response.body);
@@ -109,7 +117,8 @@ class APIService {
   }
 
   Future<SingleProductModel> getSingleProduct(int productId) async {
-    String url = '${Config.url}${Config.singleProductsURL}$productId?consumer_key=${Config.key}&consumer_secret=${Config.secret}';
+    String url =
+        '${Config.url}${Config.singleProductsURL}$productId?consumer_key=${Config.key}&consumer_secret=${Config.secret}';
     var response = await http.get(Uri.parse(url));
 
     final data = jsonDecode(response.body);
@@ -120,9 +129,11 @@ class APIService {
     }
   }
 
-  Future<List<SingleProductVariations>> getSingleProductVariation(int productID) async {
+  Future<List<SingleProductVariations>> getSingleProductVariation(
+      int productID) async {
     List<SingleProductVariations> productVariation = [];
-    String url = '${Config.url}products/$productID/variations?consumer_key=${Config.key}&consumer_secret=${Config.secret}&per_page=50';
+    String url =
+        '${Config.url}products/$productID/variations?consumer_key=${Config.key}&consumer_secret=${Config.secret}&per_page=50';
     var response = await http.get(Uri.parse(url));
     final data = jsonDecode(response.body);
     if (response.statusCode == 200) {
@@ -182,7 +193,8 @@ class APIService {
     final prefs = await SharedPreferences.getInstance();
     final int? customerId = prefs.getInt('customerId');
 
-    String url = '${Config.url}${Config.customerDetails}$customerId?consumer_key=${Config.key}&consumer_secret=${Config.secret}';
+    String url =
+        '${Config.url}${Config.customerDetails}$customerId?consumer_key=${Config.key}&consumer_secret=${Config.secret}';
     var response = await http.get(Uri.parse(url));
     final data = jsonDecode(response.body);
 
@@ -239,7 +251,8 @@ class APIService {
     return ret;
   }
 
-  Future<bool> updateProfile(RetrieveCustomer retrieveCustomer, String phoneNumber) async {
+  Future<bool> updateProfile(
+      RetrieveCustomer retrieveCustomer, String phoneNumber) async {
     final prefs = await SharedPreferences.getInstance();
     final int? customerId = prefs.getInt('customerId');
     String url = '${Config.url}${Config.customerDetails}$customerId';
@@ -282,7 +295,8 @@ class APIService {
 
     List<ListOfOrders>? listOfOrders = [];
 
-    String url = '${Config.url}orders?consumer_key=${Config.key}&consumer_secret=${Config.secret}';
+    String url =
+        '${Config.url}orders?consumer_key=${Config.key}&consumer_secret=${Config.secret}';
     var response = await http.get(Uri.parse(url));
     final data = jsonDecode(response.body);
     if (response.statusCode == 200) {
@@ -298,7 +312,8 @@ class APIService {
   }
 
   Future<RetrieveAnOrder> getAnOrder(int id) async {
-    String url = '${Config.url}${Config.anOrderUrl}$id?consumer_key=${Config.key}&consumer_secret=${Config.secret}';
+    String url =
+        '${Config.url}${Config.anOrderUrl}$id?consumer_key=${Config.key}&consumer_secret=${Config.secret}';
     var response = await http.get(Uri.parse(url));
     final data = jsonDecode(response.body);
     if (response.statusCode == 200) {
@@ -341,7 +356,8 @@ class APIService {
 
   Future<List<ProductModel>> getProductBySearch(String name) async {
     List<ProductModel> products = [];
-    String url = '${Config.url}${Config.productsURL}?search=$name&consumer_key=${Config.key}&consumer_secret=${Config.secret}';
+    String url =
+        '${Config.url}${Config.productsURL}?search=$name&consumer_key=${Config.key}&consumer_secret=${Config.secret}';
     var response = await http.get(Uri.parse(url));
 
     final data = jsonDecode(response.body);
@@ -359,7 +375,8 @@ class APIService {
     RetrieveCoupon coupons = RetrieveCoupon();
 
     double amount = 0;
-    String url = '${Config.url}${Config.coupons}?consumer_key=${Config.key}&consumer_secret=${Config.secret}&code=$couponCode';
+    String url =
+        '${Config.url}${Config.coupons}?consumer_key=${Config.key}&consumer_secret=${Config.secret}&code=$couponCode';
     var response = await http.get(Uri.parse(url));
 
     final data = jsonDecode(response.body);
@@ -369,7 +386,8 @@ class APIService {
         coupons = RetrieveCoupon.fromJson(i);
       }
       if (coupons.discountType == 'percent') {
-        amount = ((totalAmount * double.parse(coupons.amount.toString()) / 100));
+        amount =
+            ((totalAmount * double.parse(coupons.amount.toString()) / 100));
       } else if (coupons.discountType == 'fixed_cart') {
         amount = double.parse(coupons.amount.toString());
       }
@@ -388,9 +406,9 @@ class APIService {
     print(data);
     if (response.statusCode == 200) {
       for (Map i in data) {
-        if (i["alt_text"] == "banner") {
-          banner.add(Banner.fromJson(i));
-        }
+        // if (i["alt_text"] == "banner") {
+        banner.add(Banner.fromJson(i));
+        // }
       }
       return banner;
     } else {
@@ -400,7 +418,8 @@ class APIService {
 
   Future<List<RetrieveCoupon>> retrieveAllCoupon() async {
     List<RetrieveCoupon> coupons = [];
-    String url = '${Config.url}${Config.coupons}?consumer_key=${Config.key}&consumer_secret=${Config.secret}';
+    String url =
+        '${Config.url}${Config.coupons}?consumer_key=${Config.key}&consumer_secret=${Config.secret}';
     var response = await http.get(Uri.parse(url));
 
     final data = jsonDecode(response.body);
@@ -415,7 +434,8 @@ class APIService {
     }
   }
 
-  Future<bool> createReview(String review, int rating, int productId, String reviewer, String reviewerEmail) async {
+  Future<bool> createReview(String review, int rating, int productId,
+      String reviewer, String reviewerEmail) async {
     var authToken = base64Encode(
       utf8.encode('${Config.key}:${Config.secret}'),
     );
@@ -450,7 +470,8 @@ class APIService {
 
   Future<List<ProductReviewModel>> getRetrieveAllReview(int productId) async {
     List<ProductReviewModel> review = [];
-    String url = '${Config.url}${Config.createReviewUrl}?consumer_key=${Config.key}&consumer_secret=${Config.secret}&product=$productId';
+    String url =
+        '${Config.url}${Config.createReviewUrl}?consumer_key=${Config.key}&consumer_secret=${Config.secret}&product=$productId';
     var response = await http.get(Uri.parse(url));
 
     final data = jsonDecode(response.body);

@@ -53,7 +53,7 @@ class S {
   /// `MaanStore`
   String get storeTitle {
     return Intl.message(
-      'MaanStore',
+      'ZacStore',
       name: 'storeTitle',
       desc: '',
       args: [],
@@ -120,10 +120,10 @@ class S {
     );
   }
 
-  /// `MaanStore Fashion`
+  /// `ZacStore Fashion`
   String get storeName {
     return Intl.message(
-      'MaanStore Fashion',
+      'ZacStore',
       name: 'storeName',
       desc: '',
       args: [],
@@ -1433,7 +1433,7 @@ class S {
   /// `Welcome to Maanstore`
   String get splashScreenTwoHeadlines1 {
     return Intl.message(
-      'Welcome to Maanstore',
+      'Welcome to Zacstore',
       name: 'splashScreenTwoHeadlines1',
       desc: '',
       args: [],

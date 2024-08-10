@@ -56,7 +56,7 @@ class _SignUpState extends State<SignUp> {
                     color: textColors,
                   ),
                 ),
-                child:  Icon(
+                child: Icon(
                   Icons.arrow_back,
                   color: isDark ? darkTitleColor : lightTitleColor,
                 ),
@@ -71,15 +71,29 @@ class _SignUpState extends State<SignUp> {
             child: Column(
               //mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Image(image: AssetImage('images/store.png',),height: 100,width: 100,),
-                const SizedBox(height: 5,),
-                Text('Maanstore',style: kTextStyle.copyWith(color: isDark?Colors.white:const Color(0xff3E3E70),fontWeight: FontWeight.bold,fontSize: 24),),
+                const Image(
+                  image: AssetImage(
+                    'images/store.png',
+                  ),
+                  height: 100,
+                  width: 100,
+                ),
+                const SizedBox(
+                  height: 5,
+                ),
+                Text(
+                  'ZacStroe',
+                  style: kTextStyle.copyWith(
+                      color: isDark ? Colors.white : const Color(0xff3E3E70),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 24),
+                ),
                 const SizedBox(height: 20),
                 Container(
-                  height: MediaQuery.of(context).size.height/1.5,
+                  height: MediaQuery.of(context).size.height / 1.5,
                   padding: const EdgeInsets.all(30),
                   width: double.infinity,
-                  decoration:  BoxDecoration(
+                  decoration: BoxDecoration(
                     color: Theme.of(context).colorScheme.primaryContainer,
                     borderRadius: const BorderRadius.only(
                       topRight: Radius.circular(30),
@@ -96,16 +110,28 @@ class _SignUpState extends State<SignUp> {
                               decoration: InputDecoration(
                                 border: const OutlineInputBorder(),
                                 enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: isDark ? Color(0xff555671) : Colors.black, width: 1),
+                                  borderSide: BorderSide(
+                                      color: isDark
+                                          ? Color(0xff555671)
+                                          : Colors.black,
+                                      width: 1),
                                 ),
-                                labelText: lang.S.of(context).textFieldUserNameLabelText,
-                                hintText:lang.S.of(context).textFieldUserNameHintText,
+                                labelText: lang.S
+                                    .of(context)
+                                    .textFieldUserNameLabelText,
+                                hintText: lang.S
+                                    .of(context)
+                                    .textFieldUserNameHintText,
                               ),
                               validator: (value) {
                                 if (value == null || value.isEmpty) {
-                                  return lang.S.of(context).textFieldUserNameValidatorText1;
+                                  return lang.S
+                                      .of(context)
+                                      .textFieldUserNameValidatorText1;
                                 } else if (value.length < 4) {
-                                  return lang.S.of(context).textFieldUserNameValidatorText2;
+                                  return lang.S
+                                      .of(context)
+                                      .textFieldUserNameValidatorText2;
                                 }
                                 return null;
                               },
@@ -118,17 +144,27 @@ class _SignUpState extends State<SignUp> {
                               keyboardType: TextInputType.emailAddress,
                               decoration: InputDecoration(
                                 border: const OutlineInputBorder(),
-                                labelText:lang.S.of(context).textFieldEmailLabelText,
-                                hintText:lang.S.of(context).textFieldEmailHintText,
+                                labelText:
+                                    lang.S.of(context).textFieldEmailLabelText,
+                                hintText:
+                                    lang.S.of(context).textFieldEmailHintText,
                                 enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: isDark ? Color(0xff555671) : Colors.black, width: 1),
+                                  borderSide: BorderSide(
+                                      color: isDark
+                                          ? Color(0xff555671)
+                                          : Colors.black,
+                                      width: 1),
                                 ),
                               ),
                               validator: (value) {
                                 if (value == null || value.isEmpty) {
-                                  return lang.S.of(context).textFieldEmailValidatorText1;
+                                  return lang.S
+                                      .of(context)
+                                      .textFieldEmailValidatorText1;
                                 } else if (!value.contains('@')) {
-                                  return lang.S.of(context).textFieldEmailValidatorText2;
+                                  return lang.S
+                                      .of(context)
+                                      .textFieldEmailValidatorText2;
                                 }
                                 return null;
                               },
@@ -143,11 +179,15 @@ class _SignUpState extends State<SignUp> {
                               decoration: InputDecoration(
                                 border: const OutlineInputBorder(),
                                 labelText:
-                                lang.S.of(context).textFieldPassLabelText,
+                                    lang.S.of(context).textFieldPassLabelText,
                                 hintText:
-                                lang.S.of(context).textFieldPassHintText,
+                                    lang.S.of(context).textFieldPassHintText,
                                 enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: isDark ? const Color(0xff555671) : Colors.black, width: 1),
+                                  borderSide: BorderSide(
+                                      color: isDark
+                                          ? const Color(0xff555671)
+                                          : Colors.black,
+                                      width: 1),
                                 ),
                                 suffixIcon: IconButton(
                                   onPressed: () {
@@ -162,9 +202,13 @@ class _SignUpState extends State<SignUp> {
                               ),
                               validator: (value) {
                                 if (value == null || value.isEmpty) {
-                                  return lang.S.of(context).textFieldPassValidatorText1;
+                                  return lang.S
+                                      .of(context)
+                                      .textFieldPassValidatorText1;
                                 } else if (value.length < 4) {
-                                  return lang.S.of(context).textFieldPassValidatorText2;
+                                  return lang.S
+                                      .of(context)
+                                      .textFieldPassValidatorText2;
                                 }
                                 return null;
                               },
@@ -182,7 +226,8 @@ class _SignUpState extends State<SignUp> {
                           onPressFunction: () async {
                             if (validateAndSave()) {
                               EasyLoading.show(
-                                  status:lang.S.of(context).easyLoadingRegister);
+                                  status:
+                                      lang.S.of(context).easyLoadingRegister);
 
                               apiService.createCustomer(model).then((ret) {
                                 globalKey.currentState?.reset();
@@ -193,7 +238,8 @@ class _SignUpState extends State<SignUp> {
 
                                   const AddNewAddress().launch(context);
                                 } else {
-                                  EasyLoading.showError(lang.S.of(context).easyLoadingError);
+                                  EasyLoading.showError(
+                                      lang.S.of(context).easyLoadingError);
                                 }
                               });
                             }
@@ -204,7 +250,7 @@ class _SignUpState extends State<SignUp> {
                         children: [
                           Flexible(
                             child: Text(
-                             lang.S.of(context).alreadyAccount,
+                              lang.S.of(context).alreadyAccount,
                               style: kTextStyle.copyWith(
                                 fontSize: 16,
                                 overflow: TextOverflow.ellipsis,

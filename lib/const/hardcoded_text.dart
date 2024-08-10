@@ -1,6 +1,6 @@
 class HardcodedTextEng {
-  static String appName = 'Maanstore Furniture';
-  static String splashScreenOneAppName = 'Maanstore WooCommerce';
+  static String appName = 'Zacstore Furniture';
+  static String splashScreenOneAppName = 'Zacstore WooCommerce';
   static String splashScreenOneAppVersion = 'Version 1.0.2';
   static String skipText = 'Skip';
   static String registerButtonText = 'Register';
@@ -10,13 +10,15 @@ class HardcodedTextEng {
   static String textFieldUserNameLabelText = 'Username';
   static String textFieldUserNameHintText = 'Please enter Your Username';
   static String textFieldUserNameValidatorText1 = 'Username cannot be empty';
-  static String textFieldUserNameValidatorText2 = 'Please input at least 4 character';
+  static String textFieldUserNameValidatorText2 =
+      'Please input at least 4 character';
   //____________this________________
 
   static String textFieldEmailLabelText = 'Email';
   static String textFieldEmailHintText = 'Please enter Your Email address';
   static String textFieldEmailValidatorText1 = 'Email cannot be empty';
-  static String textFieldEmailValidatorText2 = 'Please enter a valid email address';
+  static String textFieldEmailValidatorText2 =
+      'Please enter a valid email address';
 
   static String textFieldPassLabelText = 'Password';
   static String textFieldPassHintText = 'Please enter a password';
@@ -63,7 +65,7 @@ class HardcodedTextEng {
   static String clearAllButton = 'Clear all';
 
   static final splashScreenTwoHeadlines = [
-    'Welcome to Maanstore',
+    'Welcome to Zacstore',
     'It’s Simple For You',
     'Choose Your Best Product',
   ];
@@ -74,7 +76,8 @@ class HardcodedTextEng {
   ];
 
   static String authScreenWelcomeText = 'Start Your Journey with';
-  static String authScreenSubTitle = 'You will find great products and tools for your needs. We are 100% conscious of quality assurance. Thank you';
+  static String authScreenSubTitle =
+      'You will find great products and tools for your needs. We are 100% conscious of quality assurance. Thank you';
 
   ///___________Cart_screen____________________________________________________________
   static String cartItems = 'items';
@@ -111,7 +114,8 @@ class HardcodedTextEng {
   static String payNowButton = 'Pay Now';
   static String cancelOrderButton = 'Cancel Order';
   static String cancelingOrder = 'Canceling Order';
-  static String cancelingOrderHintText = 'Enter reason for cancel order'; //___this______________
+  static String cancelingOrderHintText =
+      'Enter reason for cancel order'; //___this______________
 
   ///_____________Profile_screen________________________________________________________________
   static String profileScreenName = 'Profile';
@@ -189,10 +193,12 @@ class HardcodedTextEng {
   static String cashOnDale = 'Cash on Delivery';
   static String easyLoadingCreatingOrder = 'Creating Order...';
   static String orderSuccess = 'Order successfully!';
-  static String orderSuccessSubText = 'Your order will be delivered soon. Thank you.';
+  static String orderSuccessSubText =
+      'Your order will be delivered soon. Thank you.';
   static String backToHomeButton = 'Back to Home';
 
-  static String paypalErrorOne = 'There was an unexpected error, Please try again';
+  static String paypalErrorOne =
+      'There was an unexpected error, Please try again';
   static String paypalErrorTwo = 'You cancelled the payment, Please try again';
 
   ///______________NewAddress____________________________________________
@@ -218,7 +224,8 @@ class HardcodedTextEng {
   static String totalReviews = 'Total Reviews: ';
   static String writeAReview = 'Write a Review';
   static String haveNotPurched = 'Haven’t Purchased this Product?';
-  static String haveNotPurched2 = 'you can\'t write a review until purchase this product';
+  static String haveNotPurched2 =
+      'you can\'t write a review until purchase this product';
   static String continueShopping = 'Continue Shopping';
   static String ratingText = 'Enter Your Opinion';
   static String massage = 'Massage';
@@ -247,7 +254,10 @@ class HardcodedImages {
     'images/profilePic.jpg',
     'images/profilePic.jpg',
   ];
-  static List<String> paymentImageList = ['images/online_payment.jpg', 'images/cash_on_delivery.png'];
+  static List<String> paymentImageList = [
+    'images/online_payment.jpg',
+    'images/cash_on_delivery.png'
+  ];
 
   static String cashOnDel = 'images/cash_on_delivery.png';
   static String onlinePayment = 'images/online_payment.jpg';

@@ -1,6 +1,6 @@
 class HardcodedTextArabic {
-  static String appName = 'مانستور';
-  static String splashScreenOneAppName = 'Maanstore WooCommerce';
+  static String appName = 'زاك ستور';
+  static String splashScreenOneAppName = 'Zacstore WooCommerce';
   static String splashScreenOneAppVersion = 'إصدار1.0.2 ';
   static String skipText = 'يتخطى';
   static String registerButtonText = 'يسجل';
@@ -9,17 +9,23 @@ class HardcodedTextArabic {
   ///____________SignUpPage_________________________
   static String textFieldUserNameLabelText = 'اسم المستخدم';
   static String textFieldUserNameHintText = 'الرجاء إدخال اسم المستخدم';
-  static String textFieldUserNameValidatorText1 = 'اسم المستخدم لا يمكن أن يكون فارغا';
-  static String textFieldUserNameValidatorText2 = 'الرجاء إدخال 4 أحرف على الأقل';
+  static String textFieldUserNameValidatorText1 =
+      'اسم المستخدم لا يمكن أن يكون فارغا';
+  static String textFieldUserNameValidatorText2 =
+      'الرجاء إدخال 4 أحرف على الأقل';
 
   static String textFieldEmailLabelText = 'البريد الإلكتروني';
-  static String textFieldEmailHintText = 'الرجاء إدخال عنوان البريد الإلكتروني الخاص بك';
-  static String textFieldEmailValidatorText1 = 'لا يمكن أن يكون البريد الإلكتروني فارغًا';
-  static String textFieldEmailValidatorText2 = 'يرجى إدخال عنوان بريد إلكتروني صالح';
+  static String textFieldEmailHintText =
+      'الرجاء إدخال عنوان البريد الإلكتروني الخاص بك';
+  static String textFieldEmailValidatorText1 =
+      'لا يمكن أن يكون البريد الإلكتروني فارغًا';
+  static String textFieldEmailValidatorText2 =
+      'يرجى إدخال عنوان بريد إلكتروني صالح';
 
   static String textFieldPassLabelText = 'كلمة المرور';
   static String textFieldPassHintText = 'الرجاء إدخال كلمة المرور';
-  static String textFieldPassValidatorText1 = 'لا يمكن أن تكون كلمة المرور فارغة';
+  static String textFieldPassValidatorText1 =
+      'لا يمكن أن تكون كلمة المرور فارغة';
   static String textFieldPassValidatorText2 = 'الرجاء إدخال كلمة مرور أكبر';
 
   static String alreadyAccount = 'هل لديك حساب؟';
@@ -66,7 +72,11 @@ class HardcodedTextArabic {
   static String recentSearches = 'عمليات البحث الأخيرة';
   static String clearAllButton = 'امسح الكل';
 
-  static final splashScreenTwoHeadlines = ['مرحبا بكم في Maanstore', 'الأمر بسيط بالنسبة لك', 'اختر أفضل منتج لديك'];
+  static final splashScreenTwoHeadlines = [
+    'مرحبا بكم في Zacstore',
+    'الأمر بسيط بالنسبة لك',
+    'اختر أفضل منتج لديك'
+  ];
   static final splashScreenTwoSubTitles = [
     'ستجد منتجات وأدوات رائعة لاحتياجاتك. نحن ندرك ضمان الجودة بنسبة 100٪. شكرًا لك',
     'ستجد منتجات وأدوات رائعة لاحتياجاتك. نحن ندرك ضمان الجودة بنسبة 100٪. شكرًا لك',
@@ -74,7 +84,8 @@ class HardcodedTextArabic {
   ];
 
   static String authScreenWelcomeText = 'ابدأ رحلتك مع';
-  static String authScreenSubTitle = 'ستجد منتجات وأدوات رائعة لاحتياجاتك. نحن ندرك ضمان الجودة بنسبة 100٪. شكرًا لك';
+  static String authScreenSubTitle =
+      'ستجد منتجات وأدوات رائعة لاحتياجاتك. نحن ندرك ضمان الجودة بنسبة 100٪. شكرًا لك';
 
   ///___________Cart_screen____________________________________________________________
   static String cartItems = 'العناصر';
@@ -125,11 +136,13 @@ class HardcodedTextArabic {
   static String myProfileScreenName = 'تعديل الملف الشخصي';
   static String fastNameTextFieldLabel = 'اسم سريع';
   static String fastNameTextFieldHint = 'أدخل اسمك الأول';
-  static String fastNameTextFieldValidator = 'لا يمكن أن يكون الاسم الأول فارغًا';
+  static String fastNameTextFieldValidator =
+      'لا يمكن أن يكون الاسم الأول فارغًا';
 
   static String lastNameTextFieldLabel = 'الكنية';
   static String lastNameTextFieldHint = 'أدخل اسمك الأخير';
-  static String lastNameTextFieldValidator = 'لا يمكن أن يكون الاسم الأخير فارغًا';
+  static String lastNameTextFieldValidator =
+      'لا يمكن أن يكون الاسم الأخير فارغًا';
 
   static String textFieldPhoneLabel = 'رقم الهاتف';
   static String textFieldPhoneHint = 'أدخل رقم هاتفك';

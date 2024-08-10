@@ -189,11 +189,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "skipText": MessageLookupByLibrary.simpleMessage("Preskoči"),
         "specialOffer": MessageLookupByLibrary.simpleMessage("Posebna ponuda"),
         "splashScreenOneAppName":
-            MessageLookupByLibrary.simpleMessage("Maanstore WooCommerce"),
+            MessageLookupByLibrary.simpleMessage("Zacstore WooCommerce"),
         "splashScreenOneAppVersion":
             MessageLookupByLibrary.simpleMessage("Verzija 5.0"),
         "splashScreenTwoHeadlines1":
-            MessageLookupByLibrary.simpleMessage("Dobrodošli u Maanstore"),
+            MessageLookupByLibrary.simpleMessage("Dobrodošli u Zacstore"),
         "splashScreenTwoHeadlines2":
             MessageLookupByLibrary.simpleMessage("Jednostavno za vas"),
         "splashScreenTwoHeadlines3": MessageLookupByLibrary.simpleMessage(
@@ -206,8 +206,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Naći ćete sjajne proizvode i alate za svoje potrebe. Potpuno smo svjesni osiguranja kvalitete. Hvala vam"),
         "state": MessageLookupByLibrary.simpleMessage("Država*"),
         "stateHint": MessageLookupByLibrary.simpleMessage("Unesite državu"),
-        "storeName": MessageLookupByLibrary.simpleMessage("MaanStore Moda"),
-        "storeTitle": MessageLookupByLibrary.simpleMessage("MaanStore"),
+        "storeName": MessageLookupByLibrary.simpleMessage("ZacStore Moda"),
+        "storeTitle": MessageLookupByLibrary.simpleMessage("ZacStore"),
         "strAddress1Text":
             MessageLookupByLibrary.simpleMessage("Dodajte adresu 1"),
         "strAddress1TextHint":

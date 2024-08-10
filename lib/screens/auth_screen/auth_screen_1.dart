@@ -38,8 +38,7 @@ class _AuthScreenState extends State<AuthScreen> {
               child: Text(
                 lang.S.of(context).skipText,
                 style: kTextStyle.copyWith(
-                  color: isDark ? darkGreyTextColor : lightGreyTextColor
-                ),
+                    color: isDark ? darkGreyTextColor : lightGreyTextColor),
               ),
             ),
           ],
@@ -52,16 +51,30 @@ class _AuthScreenState extends State<AuthScreen> {
             ),
             Column(
               children: [
-                const Image(image: AssetImage('images/store.png',),height: 100,width: 100,),
-                SizedBox(height: 5,),
-                Text('Maanstore',style: kTextStyle.copyWith(color: isDark?Colors.white:const Color(0xff3E3E70),fontWeight: FontWeight.bold,fontSize: 24),)
+                const Image(
+                  image: AssetImage(
+                    'images/new_logo.png',
+                  ),
+                  height: 100,
+                  width: 100,
+                ),
+                SizedBox(
+                  height: 5,
+                ),
+                Text(
+                  'ZacStroe',
+                  style: kTextStyle.copyWith(
+                      color: isDark ? Colors.white : const Color(0xff3E3E70),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 24),
+                )
               ],
             ),
             const Spacer(),
             Container(
               padding: const EdgeInsets.all(30),
               width: double.infinity,
-              decoration:  BoxDecoration(
+              decoration: BoxDecoration(
                 color: Theme.of(context).colorScheme.primaryContainer,
                 borderRadius: BorderRadius.only(
                   topRight: Radius.circular(30),
@@ -94,7 +107,7 @@ class _AuthScreenState extends State<AuthScreen> {
                     lang.S.of(context).authScreenSubTitle,
                     textAlign: TextAlign.center,
                     style: GoogleFonts.dmSans(
-                      textStyle:  TextStyle(
+                      textStyle: TextStyle(
                         color: isDark ? darkGreyTextColor : lightGreyTextColor,
                         fontSize: 16,
                       ),

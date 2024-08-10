@@ -52,13 +52,13 @@ class _LogInScreenState extends State<LogInScreen> {
               padding: const EdgeInsets.all(8.0),
               child: Container(
                 decoration: BoxDecoration(
-                  borderRadius:  BorderRadius.all(Radius.circular(30)),
+                  borderRadius: BorderRadius.all(Radius.circular(30)),
                   border: Border.all(
                     width: 1,
                     color: isDark ? darkGreyTextColor : lightGreyTextColor,
                   ),
                 ),
-                child:  Icon(
+                child: Icon(
                   Icons.arrow_back,
                   color: isDark ? darkTitleColor : lightTitleColor,
                 ),
@@ -68,22 +68,37 @@ class _LogInScreenState extends State<LogInScreen> {
         ),
         body: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
+            padding: EdgeInsets.only(
+                bottom: MediaQuery.of(context).viewInsets.bottom),
             child: Column(
               //mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const SizedBox(
                   height: 10,
                 ),
-                const Image(image: AssetImage('images/store.png',),height: 100,width: 100,),
-                const SizedBox(height: 5,),
-                Text('Maanstore',style: kTextStyle.copyWith(color: isDark?Colors.white:const Color(0xff3E3E70),fontWeight: FontWeight.bold,fontSize: 24),),
+                const Image(
+                  image: AssetImage(
+                    'images/store.png',
+                  ),
+                  height: 100,
+                  width: 100,
+                ),
+                const SizedBox(
+                  height: 5,
+                ),
+                Text(
+                  'ZacStroe',
+                  style: kTextStyle.copyWith(
+                      color: isDark ? Colors.white : const Color(0xff3E3E70),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 24),
+                ),
                 const SizedBox(height: 50),
                 Container(
-                  height: MediaQuery.of(context).size.height/1.6,
+                  height: MediaQuery.of(context).size.height / 1.6,
                   padding: const EdgeInsets.all(30),
                   width: double.infinity,
-                  decoration:  BoxDecoration(
+                  decoration: BoxDecoration(
                     color: Theme.of(context).colorScheme.primaryContainer,
                     borderRadius: const BorderRadius.only(
                       topRight: Radius.circular(30),
@@ -100,17 +115,27 @@ class _LogInScreenState extends State<LogInScreen> {
                               keyboardType: TextInputType.emailAddress,
                               decoration: InputDecoration(
                                 border: const OutlineInputBorder(),
-                                labelText: lang.S.of(context).textFieldEmailLabelText,
-                                hintText: lang.S.of(context).textFieldEmailHintText,
+                                labelText:
+                                    lang.S.of(context).textFieldEmailLabelText,
+                                hintText:
+                                    lang.S.of(context).textFieldEmailHintText,
                                 enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: isDark ? Color(0xff555671) : Colors.black, width: 1),
+                                  borderSide: BorderSide(
+                                      color: isDark
+                                          ? Color(0xff555671)
+                                          : Colors.black,
+                                      width: 1),
                                 ),
                               ),
                               validator: (value) {
                                 if (value == null || value.isEmpty) {
-                                  return lang.S.of(context).textFieldEmailValidatorText1;
+                                  return lang.S
+                                      .of(context)
+                                      .textFieldEmailValidatorText1;
                                 } else if (!value.contains('@')) {
-                                  return lang.S.of(context).textFieldEmailValidatorText2;
+                                  return lang.S
+                                      .of(context)
+                                      .textFieldEmailValidatorText2;
                                 }
                                 return null;
                               },
@@ -124,25 +149,37 @@ class _LogInScreenState extends State<LogInScreen> {
                               obscureText: hidePassword,
                               decoration: InputDecoration(
                                 enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: isDark ? Color(0xff555671) : Colors.black, width: 1),
+                                  borderSide: BorderSide(
+                                      color: isDark
+                                          ? Color(0xff555671)
+                                          : Colors.black,
+                                      width: 1),
                                 ),
                                 border: const OutlineInputBorder(),
-                                labelText: lang.S.of(context).textFieldPassLabelText,
-                                hintText: lang.S.of(context).textFieldPassHintText,
+                                labelText:
+                                    lang.S.of(context).textFieldPassLabelText,
+                                hintText:
+                                    lang.S.of(context).textFieldPassHintText,
                                 suffixIcon: IconButton(
                                   onPressed: () {
                                     setState(() {
                                       hidePassword = !hidePassword;
                                     });
                                   },
-                                  icon: Icon(hidePassword ? Icons.visibility_off : Icons.visibility),
+                                  icon: Icon(hidePassword
+                                      ? Icons.visibility_off
+                                      : Icons.visibility),
                                 ),
                               ),
                               validator: (value) {
                                 if (value == null || value.isEmpty) {
-                                  return lang.S.of(context).textFieldPassValidatorText1;
+                                  return lang.S
+                                      .of(context)
+                                      .textFieldPassValidatorText1;
                                 } else if (value.length < 4) {
-                                  return lang.S.of(context).textFieldPassValidatorText2;
+                                  return lang.S
+                                      .of(context)
+                                      .textFieldPassValidatorText2;
                                 }
                                 return null;
                               },
@@ -196,14 +233,19 @@ class _LogInScreenState extends State<LogInScreen> {
                         buttonColor: kPrimaryColor,
                         onPressFunction: () {
                           if (validateAndSave()) {
-                            EasyLoading.show(status: lang.S.of(context).easyLoadingSignIn);
-                            apiService.loginCustomer(email, password).then((ret) {
+                            EasyLoading.show(
+                                status: lang.S.of(context).easyLoadingSignIn);
+                            apiService
+                                .loginCustomer(email, password)
+                                .then((ret) {
                               globalKey.currentState?.reset();
                               if (ret) {
-                                EasyLoading.showSuccess(lang.S.of(context).easyLoadingSuccess);
+                                EasyLoading.showSuccess(
+                                    lang.S.of(context).easyLoadingSuccess);
                                 const Home().launch(context, isNewTask: true);
                               } else {
-                                EasyLoading.showError(lang.S.of(context).easyLoadingError);
+                                EasyLoading.showError(
+                                    lang.S.of(context).easyLoadingError);
                               }
                             });
                           }

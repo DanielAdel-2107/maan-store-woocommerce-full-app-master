@@ -183,11 +183,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "skipText": MessageLookupByLibrary.simpleMessage("تخطى"),
         "specialOffer": MessageLookupByLibrary.simpleMessage("عروض خاصة"),
         "splashScreenOneAppName": MessageLookupByLibrary.simpleMessage(
-            "مانستور كتب مريم الدخيل لاكاديمية الثراء"),
+            "زاك ستور كتب مريم الدخيل لاكاديمية الثراء"),
         "splashScreenOneAppVersion":
             MessageLookupByLibrary.simpleMessage("الإصدار 5.0"),
         "splashScreenTwoHeadlines1":
-            MessageLookupByLibrary.simpleMessage("مرحبا بك في مانستور"),
+            MessageLookupByLibrary.simpleMessage("مرحبا بك في زاك ستور"),
         "splashScreenTwoHeadlines2":
             MessageLookupByLibrary.simpleMessage("الأمر بسيط بالنسبة لك"),
         "splashScreenTwoHeadlines3":
@@ -200,8 +200,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "ستجد منتجات وأدوات رائعة لاحتياجاتك. نحن ندرك ضمان الجودة بنسبة 100٪. شكرًا لك"),
         "state": MessageLookupByLibrary.simpleMessage("ولاية*"),
         "stateHint": MessageLookupByLibrary.simpleMessage("أدخل ولاية"),
-        "storeName": MessageLookupByLibrary.simpleMessage("أزياء معان ستور"),
-        "storeTitle": MessageLookupByLibrary.simpleMessage("معان ستور"),
+        "storeName": MessageLookupByLibrary.simpleMessage("أزياء زاك ستور"),
+        "storeTitle": MessageLookupByLibrary.simpleMessage("زاك ستور"),
         "strAddress1Text":
             MessageLookupByLibrary.simpleMessage("إضافة عنوان جديد 1"),
         "strAddress1TextHint":

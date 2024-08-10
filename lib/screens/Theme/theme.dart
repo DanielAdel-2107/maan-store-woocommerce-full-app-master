@@ -24,7 +24,9 @@ const lightContainerColor = Color(0xFFF4F4F4);
 ThemeData lightTheme = ThemeData(
   brightness: Brightness.light,
   primaryColor: primaryColor,
-  floatingActionButtonTheme: const FloatingActionButtonThemeData(backgroundColor: primaryColor),
+  visualDensity: VisualDensity.adaptivePlatformDensity,
+  floatingActionButtonTheme:
+      const FloatingActionButtonThemeData(backgroundColor: primaryColor),
   colorScheme: ColorScheme.fromSwatch().copyWith(
     brightness: Brightness.light,
     primary: const Color(0xFFFF7F00),
@@ -39,6 +41,7 @@ ThemeData darkTheme = ThemeData(
     trackColor: MaterialStateProperty.all<Color>(Colors.grey),
     thumbColor: MaterialStateProperty.all<Color>(Colors.white),
   ),
+  visualDensity: VisualDensity.adaptivePlatformDensity,
   colorScheme: ColorScheme.fromSwatch().copyWith(
     brightness: Brightness.dark,
     primary: const Color(0xFFFF7F00),

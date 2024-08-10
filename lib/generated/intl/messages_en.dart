@@ -180,11 +180,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "skipText": MessageLookupByLibrary.simpleMessage("Skip"),
         "specialOffer": MessageLookupByLibrary.simpleMessage("Special Offers"),
         "splashScreenOneAppName":
-            MessageLookupByLibrary.simpleMessage("Maanstore WooCommerce"),
+            MessageLookupByLibrary.simpleMessage("ZacStore WooCommerce"),
         "splashScreenOneAppVersion":
             MessageLookupByLibrary.simpleMessage("Version 5.0"),
         "splashScreenTwoHeadlines1":
-            MessageLookupByLibrary.simpleMessage("Welcome to Maanstore"),
+            MessageLookupByLibrary.simpleMessage("Welcome to ZacStore"),
         "splashScreenTwoHeadlines2":
             MessageLookupByLibrary.simpleMessage("It’s Simple For You"),
         "splashScreenTwoHeadlines3":
@@ -197,8 +197,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "You will find great products and tools for your needs. We are 100% conscious of quality assurance. Thank you"),
         "state": MessageLookupByLibrary.simpleMessage("State*"),
         "stateHint": MessageLookupByLibrary.simpleMessage("Enter a State"),
-        "storeName": MessageLookupByLibrary.simpleMessage("MaanStore Fashion"),
-        "storeTitle": MessageLookupByLibrary.simpleMessage("MaanStore"),
+        "storeName": MessageLookupByLibrary.simpleMessage("ZacStore"),
+        "storeTitle": MessageLookupByLibrary.simpleMessage("ZacStore"),
         "strAddress1Text":
             MessageLookupByLibrary.simpleMessage("Add New Address 1"),
         "strAddress1TextHint":

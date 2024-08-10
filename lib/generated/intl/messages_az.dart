@@ -183,11 +183,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "specialOffer":
             MessageLookupByLibrary.simpleMessage("Xüsusi təkliflər"),
         "splashScreenOneAppName":
-            MessageLookupByLibrary.simpleMessage("Maanstore WooCommerce"),
+            MessageLookupByLibrary.simpleMessage("Zacstore WooCommerce"),
         "splashScreenOneAppVersion":
             MessageLookupByLibrary.simpleMessage("Versiya 5.0"),
         "splashScreenTwoHeadlines1":
-            MessageLookupByLibrary.simpleMessage("Maanstore\'a xoş gəlmisiniz"),
+            MessageLookupByLibrary.simpleMessage("Zacstore\'a xoş gəlmisiniz"),
         "splashScreenTwoHeadlines2":
             MessageLookupByLibrary.simpleMessage("Siz üçün sadədir"),
         "splashScreenTwoHeadlines3":
@@ -201,8 +201,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "state": MessageLookupByLibrary.simpleMessage("Ştat*"),
         "stateHint":
             MessageLookupByLibrary.simpleMessage("Ştat adını daxil edin"),
-        "storeName": MessageLookupByLibrary.simpleMessage("MaanStore Moda"),
-        "storeTitle": MessageLookupByLibrary.simpleMessage("MaanStore"),
+        "storeName": MessageLookupByLibrary.simpleMessage("ZacStore Moda"),
+        "storeTitle": MessageLookupByLibrary.simpleMessage("ZacStore"),
         "strAddress1Text": MessageLookupByLibrary.simpleMessage("Yeni Ünvan 1"),
         "strAddress1TextHint":
             MessageLookupByLibrary.simpleMessage("Küçə ünvanını daxil edin"),

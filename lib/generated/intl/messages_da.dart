@@ -180,11 +180,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "skipText": MessageLookupByLibrary.simpleMessage("Spring Over"),
         "specialOffer": MessageLookupByLibrary.simpleMessage("Særtilbud"),
         "splashScreenOneAppName":
-            MessageLookupByLibrary.simpleMessage("Maanstore WooCommerce"),
+            MessageLookupByLibrary.simpleMessage("Zacstore WooCommerce"),
         "splashScreenOneAppVersion":
             MessageLookupByLibrary.simpleMessage("Version 5.0"),
         "splashScreenTwoHeadlines1":
-            MessageLookupByLibrary.simpleMessage("Velkommen til Maanstore"),
+            MessageLookupByLibrary.simpleMessage("Velkommen til Zacstore"),
         "splashScreenTwoHeadlines2":
             MessageLookupByLibrary.simpleMessage("Det er nemt for dig"),
         "splashScreenTwoHeadlines3":
